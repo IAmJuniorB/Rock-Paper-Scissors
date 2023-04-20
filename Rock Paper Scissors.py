@@ -28,11 +28,8 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-        # Check if the player clicked on one of the buttons
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            # Get the mouse position
             pos = pygame.mouse.get_pos()
-            # Check if the mouse position is within the rock button
             if rock_pos[0] <= pos[0] <= rock_pos[0] + rock_img.get_width() and rock_pos[1] <= pos[1] <= rock_pos[1] + rock_img.get_height():
                 computer_choice = choice(["rock", "paper", "scissors"])
                 if computer_choice == "rock":
